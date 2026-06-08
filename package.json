@@ -1,0 +1,31 @@
+{
+  "name": "ctrovalidate-browser",
+  "version": "1.0.0",
+  "description": "Browser adapter for Ctrovalidate - Declarative HTML-first form validation with data attributes.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --tsconfig tsconfig.build.json",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "format": "prettier . --check"
+  },
+  "author": "Ctrotech (https://github.com/ctrotech-tutor)",
+  "license": "MIT",
+  "dependencies": {
+    "ctrovalidate-core": "^1.0.0"
+  }
+}
