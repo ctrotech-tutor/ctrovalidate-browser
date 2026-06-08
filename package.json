@@ -17,27 +17,43 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts --tsconfig tsconfig.build.json",
+    "build": "vite build",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint .",
     "format": "prettier . --check"
   },
   "devDependencies": {
-    "ctrovalidate-core": "^1.0.0",
-    "tsup": "^8.5.1",
-    "vitest": "^4.0.18",
-    "eslint": "^9.39.2",
     "@eslint/js": "^9.39.2",
+    "ctrovalidate-core": "^1.0.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^17.2.0",
+    "prettier": "^3.1.1",
+    "vite": "^6.0.0",
+    "vite-plugin-dts": "^4.0.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.54.0",
-    "prettier": "^3.1.1",
-    "eslint-config-prettier": "^9.1.0",
-    "globals": "^17.2.0"
+    "vitest": "^4.0.18"
+  },
+  "homepage": "https://ctrovalidate.vercel.app/guide/browser",
+  "keywords": [
+    "ctrovalidate",
+    "validation",
+    "form-validation",
+    "browser",
+    "javascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctrotech-tutor/ctrovalidate-browser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ctrotech-tutor/ctrovalidate-browser/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "author": "Ctrotech (https://github.com/ctrotech-tutor)",
-  "license": "MIT",
-  "dependencies": {
-    "ctrovalidate-core": "^1.0.0"
-  }
+  "license": "MIT"
 }
